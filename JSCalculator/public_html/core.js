@@ -28,7 +28,7 @@ function Subtract(){
  * This function will handle the division operation
  */
 function Division(){
-    StoreVale();
+    StoreValue();
     operationFlag = "Div";
 }
 

@@ -93,5 +93,5 @@ function DisplayResult()
         default:
             break;
     }
-    document.getElementById("CalcScreen").innerHTML = Number(total);
+    document.getElementById("CalcScreen").innerHTML = (Number(total));
 }

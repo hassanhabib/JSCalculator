@@ -12,8 +12,26 @@ and open the template in the editor.
 #CalcScreen{
     height: 20px;
     width: 100px;
+    border: 1px solid black;
+    text-align:right;
+   
 }
+#CalcScreen:hover {
+    background-color:white;
+}
+
 
 table {
     border: 2px solid black;
+    
+    
+}
+
+td {
+    border: 1px solid black; 
+    text-align:center;
+} 
+
+td:hover{
+    background-color:pink;
 }

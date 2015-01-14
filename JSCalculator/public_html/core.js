@@ -42,3 +42,11 @@ function Clear()
 {
     total = 0;
 }
+
+/*
+ * This function will display the inserted number to the Calculator Screen
+ */
+function ShowOnScreen(num)
+{
+    document.getElementById("CalcScreen").innerHTML = num;
+}

@@ -1,23 +1,19 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
     <head>
         <title>JSCalculator</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="styles.css" type="css/text"/>
+        <script src="core.js" type="text/javascript"></script>
     </head> 
     <body>
-        <table>
+        <table id='CalcFrame'>
             <tr>
-                <td id="CalcScreen" colspan="4">9</td>
+                <td id="CalcScreen" colspan="4"></td>
             </tr>
             <tr>
-                <td>1</td>
+                <td onclick='ShowOnScreen(1)'>1</td>
                 <td>2</td>
                 <td>3</td>
                 <td>+</td>

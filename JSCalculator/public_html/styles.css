@@ -13,3 +13,7 @@ and open the template in the editor.
     height: 20px;
     width: 100px;
 }
+
+table {
+    border: 2px solid black;
+}

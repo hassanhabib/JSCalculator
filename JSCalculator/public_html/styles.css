@@ -23,6 +23,7 @@ and open the template in the editor.
     background-color: gainsboro;
     font-family: Headache;
     font-size:9px;
+    cursor: default;
 }
 
 /* ------ Space Styles ------ */
@@ -68,8 +69,13 @@ td {
     height:20px;
     background-color:blueviolet;
     cursor:pointer;
+    
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
 } 
 
-td:hover{
+td:active{
     background-color:pink;
 }

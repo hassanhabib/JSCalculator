@@ -66,7 +66,7 @@ function StoreValue()
  */
 function ShowOnScreen(num)
 {
-    displayVal += num;
+    if(displayVal.length < 23)displayVal += num;
     document.getElementById("CalcScreen").innerHTML = displayVal;
 }
 

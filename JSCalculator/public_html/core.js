@@ -5,33 +5,39 @@
 
 /* This is a public member for general calculations */
 var total = 0;
+var displayVal = "";
+var operationFlag = "";
 
 /*
  * This function will handle the addition operation.
  */
-function Summation(num){
-    return total + num;
+function Summation(){
+    StoreValue();
+    operationFlag = "Sum";
 }
 
 /*
  * This function will handle the subtraction operation.
  */
-function Subtract(num){
-    return total - num;
+function Subtract(){
+    StoreValue();
+    operationFlag = "Sub";
 }
 
 /*
  * This function will handle the division operation
  */
-function Division(num){
-    return total/num;
+function Division(){
+    StoreVale();
+    operationFlag = "Div";
 }
 
 /*
  * Ths function will handle the multiplication operation
  */
-function Multiplication(num){
-    return total * num;
+function Multiplication(){
+    StoreValue();
+    operationFlag = "Mult";
 }
 
 /*
@@ -41,6 +47,18 @@ function Multiplication(num){
 function Clear()
 {
     total = 0;
+    displayVal = "";
+    document.getElementById("CalcScreen").innerHTML = displayVal;
+}
+
+/*
+ * This function will empty the input data in the displayVal 
+ * variable and put it in the total variable
+ */
+function StoreValue()
+{
+    total += Number(displayVal);
+    displayVal = "";
 }
 
 /*
@@ -48,5 +66,32 @@ function Clear()
  */
 function ShowOnScreen(num)
 {
-    document.getElementById("CalcScreen").innerHTML = num;
+    displayVal += num;
+    document.getElementById("CalcScreen").innerHTML = displayVal;
+}
+
+/*
+ * This function will display the end result when the equal sign 
+ * is clicked depending on the kind of operation needed.
+ */
+function DisplayResult()
+{
+    switch(operationFlag)
+    {
+        case "Sum":
+            total+= Number(displayVal) ;
+            break;
+        case "Div":
+            total /= Number(displayVal);
+            break;
+        case "Mult":
+            total *= Number(displayVal);
+            break;
+        case "Sub":
+            total -= Number(displayVal);
+            break;
+        default:
+            break;
+    }
+    document.getElementById("CalcScreen").innerHTML = Number(total);
 }

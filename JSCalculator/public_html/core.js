@@ -3,13 +3,42 @@
  * to execute the arithmatic functions in the caluclator.
  */
 
+/* This is a public member for general calculations */
+var total = 0;
 
 /*
- * This function will handle the addition 
- * arithmatic operation.
+ * This function will handle the addition operation.
  */
-function Sum(num1, num2){
-    return num1 + num2;
+function Summation(num){
+    return total + num;
 }
 
+/*
+ * This function will handle the subtraction operation.
+ */
+function Subtract(num){
+    return total - num;
+}
 
+/*
+ * This function will handle the division operation
+ */
+function Division(num){
+    return total/num;
+}
+
+/*
+ * Ths function will handle the multiplication operation
+ */
+function Multiplication(num){
+    return total * num;
+}
+
+/*
+ * This function will clear the total in order
+ * for a new operation to start.
+ */
+function Clear()
+{
+    total = 0;
+}
